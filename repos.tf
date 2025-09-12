@@ -1,4 +1,4 @@
-# Repositories-only configuration
+# Repositories-only configuration - updated
 terraform {
   required_providers {
     github = {
