@@ -23,10 +23,10 @@ resource "github_repository" "repository" {
   for_each = var.repos
 
   # Repository configuration
-  name        = "${each.key}-repo"                                    # Repository name with suffix
-  description = "${each.value.type} repository using ${each.value.language}"  # Auto-generated description
-  visibility  = "public"                                             # Make repository public
-  auto_init   = true                                                  # Initialize with empty commit
+  name        = "${each.key}-repo"                                           # Repository name with suffix
+  description = "${each.value.type} repository using ${each.value.language}" # Auto-generated description
+  visibility  = "public"                                                     # Make repository public
+  auto_init   = true                                                         # Initialize with empty commit
 
   # Conditionally enable GitHub Pages based on repository configuration
   # Uses dynamic block to include pages configuration only when needed
@@ -35,16 +35,16 @@ resource "github_repository" "repository" {
     for_each = each.value.has_page ? [1] : []
     content {
       source {
-        branch = "main"    # Serve pages from main branch
-        path   = "/"       # Serve from root directory
+        branch = "main" # Serve pages from main branch
+        path   = "/"    # Serve from root directory
       }
     }
   }
-  
+
   # Repository features
-  has_issues   = true     # Enable issue tracking
-  has_wiki     = false    # Disable wiki
-  has_projects = false    # Disable projects
+  has_issues   = true  # Enable issue tracking
+  has_wiki     = false # Disable wiki
+  has_projects = false # Disable projects
 }
 
 # =============================================================================
@@ -58,9 +58,9 @@ resource "github_repository_file" "readme" {
   for_each = var.repos
 
   # File location and metadata
-  repository = github_repository.repository[each.key].name  # Reference created repository
-  branch     = "main"                                       # Target branch
-  file       = "README.md"                                  # File name
+  repository = github_repository.repository[each.key].name # Reference created repository
+  branch     = "main"                                      # Target branch
+  file       = "README.md"                                 # File name
 
   # README content using template syntax
   content = <<-EOT
@@ -93,7 +93,7 @@ resource "github_repository_file" "readme" {
   EOT
 
   # File management options
-  overwrite_on_create = true    # Replace file if it exists during creation
+  overwrite_on_create = true # Replace file if it exists during creation
 }
 
 # =============================================================================
@@ -107,15 +107,15 @@ resource "github_repository_file" "main_file" {
   for_each = var.repos
 
   # File location and metadata
-  repository = github_repository.repository[each.key].name     # Reference created repository
-  branch     = "main"                                          # Target branch
-  file       = local.main_files[each.value.language]          # Language-specific filename
+  repository = github_repository.repository[each.key].name # Reference created repository
+  branch     = "main"                                      # Target branch
+  file       = local.main_files[each.value.language]       # Language-specific filename
 
   # File content from language-specific templates
   content = local.file_contents[each.value.language]
 
   # File management options
-  overwrite_on_create = true    # Replace file if it exists during creation
+  overwrite_on_create = true # Replace file if it exists during creation
 }
 
 # =============================================================================
@@ -127,13 +127,13 @@ resource "github_repository_file" "main_file" {
 locals {
   # Map programming languages to their main file names
   main_files = {
-    python     = "main.py"      # Python entry point
-    javascript = "index.js"     # JavaScript entry point
-    terraform  = "main.tf"      # Terraform configuration
-    markdown   = "docs.md"      # Documentation file
-    java       = "Main.java"    # Java main class
-    go         = "main.go"      # Go entry point
-    rust       = "main.rs"      # Rust entry point
+    python     = "main.py"   # Python entry point
+    javascript = "index.js"  # JavaScript entry point
+    terraform  = "main.tf"   # Terraform configuration
+    markdown   = "docs.md"   # Documentation file
+    java       = "Main.java" # Java main class
+    go         = "main.go"   # Go entry point
+    rust       = "main.rs"   # Rust entry point
   }
 
   # Language-specific starter file contents
