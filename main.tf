@@ -19,26 +19,7 @@ provider "github" {
 locals {
   # Repository definitions with their properties
   repositories = {
-    clean_backend = {
-      type     = "backend"
-      language = "python"
-      has_page = false
-    }
-    clean_frontend = {
-      type     = "frontend"
-      language = "javascript"
-      has_page = false
-    }
-    clean_infra = {
-      type     = "infra"
-      language = "terraform"
-      has_page = false
-    }
-    clean_docs = {
-      type     = "docs"
-      language = "markdown"
-      has_page = false
-    }
+    # Empty - will destroy all repos
   }
 }
 
