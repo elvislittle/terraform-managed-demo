@@ -22,7 +22,7 @@ locals {
     fresh_api = {
       type     = "backend"
       language = "python"
-      has_page = false
+      has_page = true
     }
     fresh_web = {
       type     = "frontend"
