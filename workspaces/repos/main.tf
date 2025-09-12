@@ -31,7 +31,7 @@ locals {
 
 # Call the repositories module to create repository files
 module "repositories" {
-  source = "./modules/repositories"
+  source = "../../modules/repositories"
 
   # Pass repository configuration to the module
   repos = local.repositories

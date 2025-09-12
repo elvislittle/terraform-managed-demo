@@ -26,7 +26,7 @@ data "terraform_remote_state" "repos" {
 
 # Call the infopage module with data from remote state
 module "infopage" {
-  source = "./modules/infopage"
+  source = "../../modules/infopage"
 
   # Use outputs from repos workspace remote state
   repository_data = data.terraform_remote_state.repos.outputs.repositories
