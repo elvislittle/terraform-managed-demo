@@ -16,8 +16,8 @@
 terraform {
   required_providers {
     github = {
-      source  = "integrations/github"  # Official GitHub provider
-      version = "~> 6.0"                # Use version 6.x (allows minor updates)
+      source  = "integrations/github" # Official GitHub provider
+      version = "~> 6.0"              # Use version 6.x (allows minor updates)
     }
   }
 }
@@ -41,15 +41,20 @@ locals {
   repositories = {
     # Backend API repository
     test_api = {
-      type     = "backend"     # Repository category/type
-      language = "python"      # Primary programming language
-      has_page = false         # Whether to enable GitHub Pages
+      type     = "backend" # Repository category/type
+      language = "python"  # Primary programming language
+      has_page = false     # Whether to enable GitHub Pages
     }
     # Frontend web application repository
     test_web = {
-      type     = "frontend"    # Repository category/type
-      language = "javascript"  # Primary programming language
-      has_page = false         # Whether to enable GitHub Pages
+      type     = "frontend"   # Repository category/type
+      language = "javascript" # Primary programming language
+      has_page = false        # Whether to enable GitHub Pages
+    }
+    test_infra = {
+      type     = "infrastructure"
+      language = "terraform"
+      has_page = false
     }
     # Add more repositories here as needed:
     # new_repo = {
