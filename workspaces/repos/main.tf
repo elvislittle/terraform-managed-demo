@@ -49,7 +49,7 @@ locals {
     test_web = {
       type     = "frontend"   # Repository category/type
       language = "javascript" # Primary programming language
-      has_page = true         # Whether to enable GitHub Pages
+      has_page = false        # Whether to enable GitHub Pages
     }
     test_infra = {
       type     = "infrastructure"
