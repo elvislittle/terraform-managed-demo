@@ -43,18 +43,18 @@ locals {
     test_api = {
       type     = "backend" # Repository category/type
       language = "python"  # Primary programming language
-      has_page = false     # Whether to enable GitHub Pages
+      has_page = true      # Whether to enable GitHub Pages
     }
     # Frontend web application repository
     test_web = {
       type     = "frontend"   # Repository category/type
       language = "javascript" # Primary programming language
-      has_page = false        # Whether to enable GitHub Pages
+      has_page = true         # Whether to enable GitHub Pages
     }
     test_infra = {
       type     = "infrastructure"
       language = "terraform"
-      has_page = false
+      has_page = true
     }
     # Add more repositories here as needed:
     # new_repo = {
