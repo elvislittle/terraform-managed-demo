@@ -27,7 +27,7 @@ locals {
     fresh_web = {
       type     = "frontend"
       language = "javascript"
-      has_page = false
+      has_page = true
     }
     fresh_infra = {
       type     = "infra"
