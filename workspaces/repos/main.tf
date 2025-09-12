@@ -19,12 +19,12 @@ locals {
     test_api = {
       type     = "backend"
       language = "python"
-      has_page = true
+      has_page = false
     }
     test_web = {
       type     = "frontend"
       language = "javascript"
-      has_page = true
+      has_page = false
     }
   }
 }
