@@ -12,7 +12,7 @@ terraform {
 
 # Configure the GitHub Provider
 provider "github" {
-  # token = var.github_token # Set via GITHUB_TOKEN environment variable
+  # token = var.github_token # Set via GITHUB_TOKEN environment variable 1
 }
 
 # Define local variables for repository configuration
