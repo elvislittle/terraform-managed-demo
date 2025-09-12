@@ -24,7 +24,7 @@ locals {
     test_web = {
       type     = "frontend"
       language = "javascript"
-      has_page = false
+      has_page = true
     }
   }
 }
