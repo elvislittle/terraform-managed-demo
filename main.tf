@@ -19,27 +19,27 @@ provider "github" {
 locals {
   # Repository definitions with their properties
   repositories = {
-  #   fresh_api = {
-  #     type     = "backend"
-  #     language = "python"
-  #     has_page = false
-  #   }
-  #   fresh_web = {
-  #     type     = "frontend"
-  #     language = "javascript"
-  #     has_page = false
-  #   }
-  #   fresh_infra = {
-  #     type     = "infra"
-  #     language = "terraform"
-  #     has_page = false
-  #   }
-  #   fresh_docs = {
-  #     type     = "docs"
-  #     language = "markdown"
-  #     has_page = false
-  #   }
-  # }
+    #   fresh_api = {
+    #     type     = "backend"
+    #     language = "python"
+    #     has_page = false
+    #   }
+    #   fresh_web = {
+    #     type     = "frontend"
+    #     language = "javascript"
+    #     has_page = false
+    #   }
+    #   fresh_infra = {
+    #     type     = "infra"
+    #     language = "terraform"
+    #     has_page = false
+    #   }
+    #   fresh_docs = {
+    #     type     = "docs"
+    #     language = "markdown"
+    #     has_page = false
+    #   }
+  }
 }
 
 # Call the repositories module to create repository files
