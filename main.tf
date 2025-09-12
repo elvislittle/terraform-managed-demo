@@ -19,7 +19,26 @@ provider "github" {
 locals {
   # Repository definitions with their properties
   repositories = {
-    # Empty - will destroy all repos
+    fresh_api = {
+      type     = "backend"
+      language = "python"
+      has_page = false
+    }
+    fresh_web = {
+      type     = "frontend"
+      language = "javascript"
+      has_page = false
+    }
+    fresh_infra = {
+      type     = "infra"
+      language = "terraform"
+      has_page = false
+    }
+    fresh_docs = {
+      type     = "docs"
+      language = "markdown"
+      has_page = false
+    }
   }
 }
 
