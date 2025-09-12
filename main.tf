@@ -15,7 +15,7 @@ provider "github" {
   # token = var.github_token # Set via GITHUB_TOKEN environment variable
 }
 
-# Define local variables for repository configuration 1
+# Define local variables for repository configuration
 locals {
   # Repository definitions with their properties
   repositories = {
