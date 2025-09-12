@@ -19,26 +19,7 @@ provider "github" {
 locals {
   # Repository definitions with their properties
   repositories = {
-    fresh_api = {
-      type     = "backend"
-      language = "python"
-      has_page = true
-    }
-    fresh_web = {
-      type     = "frontend"
-      language = "javascript"
-      has_page = true
-    }
-    fresh_infra = {
-      type     = "infra"
-      language = "terraform"
-      has_page = true
-    }
-    fresh_docs = {
-      type     = "docs"
-      language = "markdown"
-      has_page = true
-    }
+    # Empty - no repositories
   }
 }
 
@@ -51,9 +32,9 @@ module "repositories" {
 }
 
 # Call the infopage module and pass repository data from repositories module
-module "infopage" {
-  source = "./modules/infopage"
+# module "infopage" {
+#   source = "./modules/infopage"
 
-  # Use outputs from repositories module as inputs to infopage module
-  repository_data = module.repositories.repository_info
-}
+#   # Use outputs from repositories module as inputs to infopage module
+#   repository_data = module.repositories.repository_info
+# }
