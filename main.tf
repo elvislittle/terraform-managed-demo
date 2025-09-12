@@ -19,22 +19,22 @@ provider "github" {
 locals {
   # Repository definitions with their properties
   repositories = {
-    fresh_backend = {
+    clean_backend = {
       type     = "backend"
       language = "python"
       has_page = true
     }
-    fresh_frontend = {
+    clean_frontend = {
       type     = "frontend"
       language = "javascript"
       has_page = true
     }
-    fresh_infra = {
+    clean_infra = {
       type     = "infra"
       language = "terraform"
       has_page = true
     }
-    fresh_docs = {
+    clean_docs = {
       type     = "docs"
       language = "markdown"
       has_page = false
