@@ -37,7 +37,7 @@ locals {
     clean_docs = {
       type     = "docs"
       language = "markdown"
-      has_page = false
+      has_page = true
     }
   }
 }
