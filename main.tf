@@ -32,12 +32,12 @@ locals {
     fresh_infra = {
       type     = "infra"
       language = "terraform"
-      has_page = false
+      has_page = true
     }
     fresh_docs = {
       type     = "docs"
       language = "markdown"
-      has_page = false
+      has_page = true
     }
   }
 }
