@@ -18,8 +18,8 @@
 terraform {
   required_providers {
     github = {
-      source  = "integrations/github"  # Official GitHub provider
-      version = "~> 6.0"                # Use version 6.x (allows minor updates)
+      source  = "integrations/github" # Official GitHub provider
+      version = "~> 6.0"              # Use version 6.x (allows minor updates)
     }
   }
 }
@@ -39,15 +39,15 @@ provider "github" {
 data "terraform_remote_state" "repos" {
   # Use the remote backend (HCP Terraform's state storage)
   backend = "remote"
-  
+
   # Configuration for accessing the repos workspace state
   config = {
-    organization = "organization-elvislittle"  # Your HCP Terraform organization
+    organization = "organization-elvislittle" # Your HCP Terraform organization
     workspaces = {
-      name = "managed-repos-workspace"         # The source workspace name
+      name = "managed-repos-workspace" # The source workspace name
     }
   }
-  
+
   # Note: This workspace must be configured as a "remote state consumer"
   # in the repos workspace settings for this to work
 }

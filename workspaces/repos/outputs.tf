@@ -15,11 +15,11 @@
 # Exposes detailed information about all created repositories
 output "repositories" {
   description = "Complete repository information for consumption by other workspaces"
-  
+
   # Value comes from the repositories module output
   # This contains details like repository names, URLs, pages status, etc.
   value = module.repositories.repository_info
-  
+
   # Note: This output becomes available as:
   # data.terraform_remote_state.repos.outputs.repositories
   # in other workspaces that reference this workspace's state
