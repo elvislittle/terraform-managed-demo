@@ -9,7 +9,7 @@ variable "project_name" {
 variable "author" {
   description = "Author name for the info page"
   type        = string
-  default     = "Elvis Little - changed by developer 1"
+  default     = "Elvis Little - changed by developer 2"
 }
 
 variable "github_token" {
@@ -17,4 +17,8 @@ variable "github_token" {
   type        = string
   sensitive   = true
   default     = null # Set via GITHUB_TOKEN environment variable
+}
+
+variable "tags" {
+  default = {}
 }
