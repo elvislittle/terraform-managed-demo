@@ -1,7 +1,7 @@
 # Input variables for the root module
 
 variable "project_name" {
-  description = "Name of the project"
+  description = "Name of the project BUG 2"
   type        = string
   default     = "terraform-demo"
 }
