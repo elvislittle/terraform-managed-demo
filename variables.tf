@@ -25,7 +25,7 @@ variable "tags" {
 
 variable "tags" {
   default = {
-    "fixed bug 1" = true
+    "fixed bug 3" = true
     "fixed bug X" = "no"
   }
 }
