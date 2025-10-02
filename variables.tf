@@ -9,7 +9,7 @@ variable "project_name" {
 variable "author" {
   description = "Author name for the info page"
   type        = string
-  default     = "Demo User"
+  default     = "Elvis Little"
 }
 
 variable "github_token" {
